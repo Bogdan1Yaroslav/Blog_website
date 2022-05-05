@@ -1,0 +1,21 @@
+{% extends 'my_blog/base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Post(s) csv-file upload" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <body>
+        <h2>{% trans "Post(s) csv-file upload" %}</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ upload_file_form.as_p }}
+            <button type="submit">{% trans "Upload" %}</button>
+        </form>
+
+    </body>
+</div>
+{% endblock %}

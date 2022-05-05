@@ -1,0 +1,21 @@
+{% extends 'my_blog/base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Edit post" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <body>
+        <h2>{% trans "Edit post" %}</h2>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ post_form.as_p }}
+            <button type="submit">{% trans "Save" %}</button>
+        </form>
+    </body>
+</div>
+{% endblock %}

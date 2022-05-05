@@ -1,0 +1,53 @@
+{% extends 'my_blog/base.html' %}
+{% load i18n %}
+
+{% block title %}
+    {{ object.post_title }}
+{% endblock %}
+
+{% block content %}
+    <body>
+        <div class="container">
+            <div class="container_post">
+                <div class="post_detail_introductory">
+                    <h1 class="post_detail_h1">{{ object.post_title }}</h1>
+
+                    {% if request.user == object.post_author %}
+                        <lu class="post_detail_buttons_list list-reset">
+                            <li class="post_detail_buttons_list_item">
+                                <a class="edit_btn" href="/my_blog/edit_post/{{ object.id }}" target="_blank">
+                                    {% trans "Edit post" %}
+                                </a>
+                            </li>
+                            <li class="post_detail_buttons_list_item">
+                                <a class="upload_img_btn" href="/my_blog/upload_images/{{ object.id }}" target="_blank">
+                                    {% trans "Upload images" %}
+                                </a>
+                            </li>
+                        </lu>
+                    {% endif %}
+                </div>
+                <h2 class="post_detail_h2">{% trans "Author" %}: {{ object.post_author.first_name }}</h2>
+                <h2 class="post_detail_h2">{% trans "Publication date" %}: {{ object.publication_date }}</h2>
+                <p class="post_detail_p">{{ object.post_content }}</p>
+
+
+
+               {% if images %}
+                    <ul>
+                        {% for image in images %}
+                            <img src="{{ image.images.url }}" alt="">
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>{% trans "This post does not contain images." %}</p>
+                {% endif %}
+
+
+                {% if not request.user.is_authenticated %}
+                    <p class="post_detail_not_auth_p">{% trans "You are not authorised!" %}</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+{% endblock %}

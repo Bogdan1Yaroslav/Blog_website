@@ -1,0 +1,348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-04 19:46+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\app_my_blog\admin.py:58
+msgid "Change to Active status"
+msgstr "Перевести в статус Активно"
+
+#: .\app_my_blog\admin.py:59
+msgid "Change to No-active status"
+msgstr "Перевести в статус Неактивно"
+
+#: .\app_my_blog\apps.py:7
+msgid "blog"
+msgstr "Блог"
+
+#: .\app_my_blog\forms.py:22
+msgid "example: 1990-10-10"
+msgstr "пример: 1990-10-10"
+
+#: .\app_my_blog\forms.py:24
+msgid "example: +0000000000"
+msgstr "пример: +0000000000"
+
+#: .\app_my_blog\models.py:11
+msgid "user"
+msgstr "Пользователь"
+
+#: .\app_my_blog\models.py:12
+msgid "birth date"
+msgstr "Дата рождения"
+
+#: .\app_my_blog\models.py:13
+msgid "city"
+msgstr "Город"
+
+#: .\app_my_blog\models.py:14
+msgid "email"
+msgstr "почта"
+
+#: .\app_my_blog\models.py:17
+msgid "telephone"
+msgstr "Телефон"
+
+#: .\app_my_blog\models.py:19
+msgid "number of publications"
+msgstr "Кол-во публикаций"
+
+#: .\app_my_blog\models.py:22
+msgid "profiles"
+msgstr "Профили"
+
+#: .\app_my_blog\models.py:23
+msgid "profile"
+msgstr "Профиль"
+
+#: .\app_my_blog\models.py:36
+msgid "Post author"
+msgstr "Автор"
+
+#: .\app_my_blog\models.py:37
+msgid "Post title"
+msgstr "Заголовок поста"
+
+#: .\app_my_blog\models.py:38
+msgid "Content"
+msgstr "Содержание"
+
+#: .\app_my_blog\models.py:39
+#: .\app_my_blog\templates\my_blog\post_detail.html:31
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: .\app_my_blog\models.py:40
+msgid "Edit date"
+msgstr "Дата редактирования"
+
+#: .\app_my_blog\models.py:41
+msgid "Activity status"
+msgstr "Статус активности"
+
+#: .\app_my_blog\models.py:42
+msgid "Status"
+msgstr "Статус"
+
+#: .\app_my_blog\models.py:49
+msgid "posts"
+msgstr "Посты"
+
+#: .\app_my_blog\models.py:50
+msgid "post"
+msgstr "Пост"
+
+#: .\app_my_blog\models.py:57
+msgid "Post name"
+msgstr "Название поста"
+
+#: .\app_my_blog\models.py:58
+msgid "Path"
+msgstr "Путь"
+
+#: .\app_my_blog\models.py:64
+msgid "images"
+msgstr "Изображения"
+
+#: .\app_my_blog\models.py:65
+msgid "image"
+msgstr "Изображение"
+
+#: .\app_my_blog\templates\my_blog\create_post.html:6
+#: .\app_my_blog\templates\my_blog\create_post.html:13
+#: .\app_my_blog\templates\my_blog\home.html:113
+msgid "Create post"
+msgstr "Создать пост"
+
+#: .\app_my_blog\templates\my_blog\create_post.html:17
+msgid "Publish"
+msgstr "Опубликовать"
+
+#: .\app_my_blog\templates\my_blog\edit_post.html:6
+#: .\app_my_blog\templates\my_blog\edit_post.html:13
+#: .\app_my_blog\templates\my_blog\post_detail.html:19
+msgid "Edit post"
+msgstr "Редактировать пост"
+
+#: .\app_my_blog\templates\my_blog\edit_post.html:17
+msgid "Save"
+msgstr "Сохранить изменения"
+
+#: .\app_my_blog\templates\my_blog\edit_profile.html:5
+#: .\app_my_blog\templates\my_blog\edit_profile.html:11
+msgid "Profile editing"
+msgstr "Редактировать профиль"
+
+#: .\app_my_blog\templates\my_blog\edit_profile.html:16
+msgid "Save changes"
+msgstr "Сохранить"
+
+#: .\app_my_blog\templates\my_blog\home.html:6
+#: .\app_my_blog\templates\my_blog\profile.html:35
+msgid "Home page"
+msgstr "Главная страница"
+
+#: .\app_my_blog\templates\my_blog\home.html:20
+#: .\app_my_blog\templates\my_blog\home.html:58
+msgid "Blog"
+msgstr "Блог"
+
+#: .\app_my_blog\templates\my_blog\home.html:25
+#: .\app_my_blog\templates\my_blog\home.html:134
+msgid "Services"
+msgstr "Услуги"
+
+#: .\app_my_blog\templates\my_blog\home.html:30
+#: .\app_my_blog\templates\my_blog\home.html:150
+msgid "Advantages"
+msgstr "Преимущества"
+
+#: .\app_my_blog\templates\my_blog\home.html:35
+#: .\app_my_blog\templates\my_blog\home.html:161
+msgid "About us"
+msgstr "О нас"
+
+#: .\app_my_blog\templates\my_blog\home.html:40
+#: .\app_my_blog\templates\my_blog\home.html:173
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\app_my_blog\templates\my_blog\home.html:61
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: .\app_my_blog\templates\my_blog\home.html:62
+#: .\app_my_blog\templates\my_blog\profile.html:6
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\app_my_blog\templates\my_blog\home.html:63
+#: .\app_my_blog\templates\my_blog\profile.html:38
+msgid "Log out"
+msgstr "Выйти из учетной записи"
+
+#: .\app_my_blog\templates\my_blog\home.html:65
+msgid "You are not authorized"
+msgstr "Вы не авторизованы"
+
+#: .\app_my_blog\templates\my_blog\home.html:68
+#: .\app_my_blog\templates\my_blog\login.html:5
+#: .\app_my_blog\templates\my_blog\login.html:15
+msgid "Login"
+msgstr "Вход"
+
+#: .\app_my_blog\templates\my_blog\home.html:71
+#: .\app_my_blog\templates\my_blog\register.html:17
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\app_my_blog\templates\my_blog\home.html:81
+#: .\app_my_blog\templates\my_blog\home.html:82
+msgid "Search"
+msgstr "Поиск"
+
+#: .\app_my_blog\templates\my_blog\home.html:100
+msgid "Post is under approval."
+msgstr "Данный пост на согласовании у модератора."
+
+#: .\app_my_blog\templates\my_blog\home.html:106
+msgid "No publications yet"
+msgstr "Нет публикаций"
+
+#: .\app_my_blog\templates\my_blog\home.html:118
+msgid "Upload post(s) using csv file"
+msgstr "Загрузить пост(ы) через csv file"
+
+#: .\app_my_blog\templates\my_blog\home.html:123
+#: .\app_my_blog\templates\my_blog\profile.html:28
+msgid "Only verified users are allowed to post."
+msgstr "Публиковать посты могут только верифицированные пользователи."
+
+#: .\app_my_blog\templates\my_blog\home.html:191
+msgid "© 2012-2022 «My Blog» LLC"
+msgstr "© 2012-2022 ООО «Мой Блог»"
+
+#: .\app_my_blog\templates\my_blog\home.html:192
+msgid "999999, Lenin street,  1 building 2, office 3"
+msgstr "999999, улица Ленина, дом 1 строение 2, офис 3"
+
+#: .\app_my_blog\templates\my_blog\home.html:193
+msgid ""
+"The information presented on the site is for reference only and is not a "
+"public offer."
+msgstr ""
+"Представленная на сайте информация носит справочный характер и не является "
+"публичной офертой"
+
+#: .\app_my_blog\templates\my_blog\home.html:194
+msgid "Terms of service"
+msgstr "Пользовательское соглашение"
+
+#: .\app_my_blog\templates\my_blog\login.html:11
+msgid "Login page"
+msgstr "Страница входа"
+
+#: .\app_my_blog\templates\my_blog\logout.html:2
+#: .\app_my_blog\templates\my_blog\logout.html:10
+msgid "Logout"
+msgstr "Выход из учетной записи"
+
+#: .\app_my_blog\templates\my_blog\logout.html:11
+msgid "You have successfully logged out!"
+msgstr "Вы успешно вышли из учетной записи!"
+
+#: .\app_my_blog\templates\my_blog\post_detail.html:24
+msgid "Upload images"
+msgstr "Загрузить фото"
+
+#: .\app_my_blog\templates\my_blog\post_detail.html:30
+msgid "Author"
+msgstr "Автор поста"
+
+#: .\app_my_blog\templates\my_blog\post_detail.html:43
+msgid "This post does not contain images."
+msgstr "Пост без фото."
+
+#: .\app_my_blog\templates\my_blog\post_detail.html:48
+msgid "You are not authorised!"
+msgstr "Вы не авторизованы"
+
+#: .\app_my_blog\templates\my_blog\profile.html:12
+msgid "Profile info"
+msgstr "Сведения о профиле"
+
+#: .\app_my_blog\templates\my_blog\profile.html:15
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: .\app_my_blog\templates\my_blog\profile.html:16
+msgid "First name"
+msgstr "Имя"
+
+#: .\app_my_blog\templates\my_blog\profile.html:17
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\app_my_blog\templates\my_blog\profile.html:18
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+#: .\app_my_blog\templates\my_blog\profile.html:19
+msgid "City"
+msgstr "Город"
+
+#: .\app_my_blog\templates\my_blog\profile.html:20
+msgid "Telephone"
+msgstr "Телефон"
+
+#: .\app_my_blog\templates\my_blog\profile.html:24
+#: .\app_my_blog\templates\my_blog\profile.html:28
+msgid "Number of publications"
+msgstr "Кол-во публикаций"
+
+#: .\app_my_blog\templates\my_blog\profile.html:42
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: .\app_my_blog\templates\my_blog\register.html:6
+#: .\app_my_blog\templates\my_blog\register.html:13
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\app_my_blog\templates\my_blog\upload_images.html:6
+#: .\app_my_blog\templates\my_blog\upload_images.html:12
+msgid "Uploading photos for post"
+msgstr "Загрузить фотографии к посту"
+
+#: .\app_my_blog\templates\my_blog\upload_images.html:16
+#: .\app_my_blog\templates\my_blog\upload_post_file.html:16
+msgid "Upload"
+msgstr "Загрузить"
+
+#: .\app_my_blog\templates\my_blog\upload_post_file.html:6
+#: .\app_my_blog\templates\my_blog\upload_post_file.html:12
+msgid "Post(s) csv-file upload"
+msgstr "Загрузка csv-файла с постами"
+
+#~ msgid "Translated text."
+#~ msgstr "Наша переведенная страница"
+
+#~ msgid "Welcome to our page"
+#~ msgstr "Добро пожаловать на нашу страницу"

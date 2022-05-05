@@ -1,0 +1,213 @@
+{% extends 'my_blog/base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Home page" %}
+{% endblock %}
+
+
+{% block content %}
+    <body>
+        <div class="wrapper">
+             <header class="header">
+
+                <div class="container">
+                    <nav class="header-nav">
+                        <ul class="header-list flex list-reset">
+                            <li class="header-list-item">
+                                <a href="#blog" >
+                                  {% trans "Blog" %}
+                                </a>
+                            </li>
+                            <li class="header-list-item">
+                                <a href="#services">
+                                    {% trans "Services" %}
+                                </a>
+                            </li>
+                            <li class="header-list-item">
+                                <a href="#advantages">
+                                     {% trans "Advantages" %}
+                                </a>
+                            </li>
+                            <li class="header-list-item">
+                                <a href="#about_us" >
+                                    {% trans "About us" %}
+                                </a>
+                            </li>
+                            <li class="header-list-item">
+                                <a href="#contacts">
+                                    {% trans "Contacts" %}
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                  </div>
+            </header>
+
+             <main class="main_container">
+
+                 <h1 class="visually-hidden">
+                    This is h1.
+                  </h1>
+
+
+                <section id="blog" class="blog_section">
+                    <div class="container">
+                        <div class="post_div">
+                            <h2 class="blog_h2">{% trans "Blog" %}</h2>
+                            <div>
+                                {% if request.user.is_authenticated %}
+                                    <p class="welcome_text_p">{% trans "Welcome" %}, {{ request.user.username }}!</p>
+                                    <a class="log-out-btn" href="{% url 'profile' %}">{% trans "Profile" %}</a>
+                                    <a class="log-out-btn" href="{% url 'logout' %}">{% trans "Log out" %}</a>
+                                {% else %}
+                                    <h3>{% trans "You are not authorized" %}</h3>
+                                    <div class="buttons_div">
+                                        <a class="log-in-btn" href="{% url 'login' %}">
+                                            {% trans "Login" %}
+                                        </a>
+                                        <a class="register-btn" href="{% url 'register' %}">
+                                            {% trans "Register" %}
+                                        </a>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+
+                        <div class="div_search">
+                            <form class="search_form">
+                                <input name="search_request" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
+                                <button type="submit">{% trans "Search" %}</button>
+                            </form>
+                        </div>
+
+
+
+                        <div>
+                            {% if posts %}
+                            <ul class="news_list">
+                            {% for elem in posts %}
+                                {% if elem.is_published and elem.status == "a" %}
+                                    <li class="news_list_item">
+                                        <a href="/my_blog/{{ elem.id }}" target="_blank">
+                                            {{ elem.post_title }}<br>
+                                            {{ elem.post_content|truncatechars:100 }}
+                                        </a>
+                                    </li>
+                                {% else %}
+                                    <li>{% trans "Post is under approval." %}</li>
+
+                                {% endif %}
+                            {% endfor %}
+                            </ul>
+                            {% else %}
+                                <p>{% trans "No publications yet" %}</p>
+                            {% endif %}
+
+                            {% if request.user.is_authenticated %}
+                                <lu class="publish_buttons_list list-reset">
+                                    <li class="publish_buttons_list_item">
+                                        <a class="publish_news" href="/my_blog/create_post" target="_blank">
+                                            {% trans "Create post" %}
+                                        </a>
+                                    </li>
+                                    <li class="publish_buttons_list_item">
+                                        <a class="publish_news_by_file" href="{% url 'upload_posts' %}" target="_blank">
+                                            {% trans "Upload post(s) using csv file" %}
+                                        </a>
+                                    </li>
+                                </lu>
+                            {% else %}
+                            <p class="publication_condition_warning">{% trans "Only verified users are allowed to post." %}</p>
+
+                            {% endif %}
+                        </div>
+                    </div>
+                </section>
+
+
+                 <section id="services" class="services_section">
+                    <div class="container">
+                        <div class="post_div">
+                            <h2>{% trans "Services" %}</h2>
+                            <div>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </section>
+
+
+                 <section id="advantages" class="advantages_section">
+                    <div class="container">
+                        <div class="post_div">
+                            <h2>{% trans "Advantages" %}</h2>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section id="about_us" class="about_us_section">
+                    <div class="container">
+                        <div class="post_div">
+                            <h2>{% trans "About us" %}</h2>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                 <section id="contacts" class="contacts_section">
+                    <div class="container">
+                        <div class="post_div">
+                            <h2>{% trans "Contacts" %}</h2>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+
+
+
+            <footer class="footer">
+              <div class="container">
+                <div class="footer-container flex footer-background-img">
+
+
+                  <div class="footer-div-1">
+                    <p class="footer-p">{% trans "© 2012-2022 «My Blog» LLC" %}</p>
+                    <p class="footer-p">{% trans "999999, Lenin street,  1 building 2, office 3" %}</p><br><br>
+                    <p class="footer-p">{% trans "The information presented on the site is for reference only and is not a public offer." %}</p>
+                    <a href="#" class="user-agreement">{% trans "Terms of service" %}</a>
+                  </div>
+
+                  <div class="footer-div-2">
+                    <div class="footer-telephones-and-emails">
+                      <div class="footer-telephones">
+                        <a href="tel:+749999999999" class="footer-telephone-link">+7 (499) 999-99-99</a><br>
+                      </div>
+                      <div class="footer-emails">
+                        <a href="mailto:my-blog@gmail.com" class="footer-mail-link">my-blog@gmail.com</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </footer>
+        </div>
+    </body>
+{% endblock %}

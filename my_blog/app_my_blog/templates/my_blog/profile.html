@@ -1,0 +1,50 @@
+{% extends 'my_blog/base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Profile" %}
+{% endblock %}
+
+{% block content %}
+    <body>
+        <div class="container">
+            <h1 class="profile_h1">{% trans "Profile info" %}</h1>
+            <div class="profile">
+                <div class="profile_data">
+                    <p>{% trans "User name" %}: {{ request.user.username }}</p>
+                    <p>{% trans "First name" %}: {{ request.user.first_name }}</p>
+                    <p>{% trans "Last name" %}: {{ request.user.last_name }}</p>
+                    <p>{% trans "Date of birth" %}: {{ request.user.profile.date_of_birth }}</p>
+                    <p>{% trans "City" %}: {{ request.user.profile.city }}</p>
+                    <p>{% trans "Telephone" %}: {{ request.user.profile.phone_number }}</p>
+                    <p>Email: {{ request.user.profile.email }}</p>
+                    {% if request.user.is_authenticated %}
+                        <p>
+                            {% trans "Number of publications" %}: {{ request.user.profile.number_of_publications }}
+                        </p>
+                    {% else %}
+                        <p>
+                            {% trans "Number of publications" %}: {% trans "Only verified users are allowed to post." %}
+                        </p>
+                    {% endif %}
+                </div>
+                <div class="profile_buttons">
+                    <ul class="list-reset">
+                        <li class="profile_buttons_list_item profile_buttons_list">
+                            <a class="log-out-btn" href="{% url 'home' %}">{% trans "Home page" %}</a>
+                        </li>
+                        <li class="profile_buttons_list_item profile_buttons_list">
+                            <a class="log-out-btn" href="{% url 'logout' %}">{% trans "Log out" %}</a>
+                        </li>
+                        <li class="profile_buttons_list_item profile_buttons_list">
+                            <a class="edit-profile-btn" href="/my_blog/edit_profile/{{ request.user.profile.id }}">
+                                {% trans "Edit profile" %}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}

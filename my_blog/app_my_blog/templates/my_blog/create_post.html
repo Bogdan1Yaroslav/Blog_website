@@ -1,0 +1,21 @@
+{% extends 'my_blog/base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Create post" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <body>
+        <h2>{% trans "Create post" %}</h2>
+        <form method="post" action="/my_blog/create_post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ post_form.as_p }}
+            <button type="submit">{% trans "Publish" %}</button>
+        </form>
+    </body>
+</div>
+{% endblock %}
